@@ -29,7 +29,7 @@ def sentimenal_analysis(message,sender):
     else:
         print(f"{sender}: {message}")
 
-bot_replies=["Hi, How are You!","You are Dumb", "I will kill you", "I hate you"]
+bot_replies=["Hi, How are You!","Do not worry","I will take care","You are Dumb","You are amazing","I will kill you", "I hate you"]
 
 app_run=True
 while app_run:
@@ -42,4 +42,5 @@ while app_run:
 
     reply=random.choice(bot_replies)
     sentimenal_analysis(reply,sender="Bot/Friend")
+
 

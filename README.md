@@ -47,28 +47,13 @@ Bot_token = "YOUR_BOT_TOKEN"          # Replace with your Telegram bot token
 Parent_token = "YOUR_PARENT_CHAT_ID"  # Replace with the parent/admin chat ID
 ```
 
-### ⚠️ Optional: Use `.env` for Safer Storage
-
-1. Create a `.env` file in the project root:
-
-```
-BOT_TOKEN=your_bot_token_here
-PARENT_TOKEN=your_parent_chat_id_here
-```
-
-2. Install `python-dotenv`:
-
-```bash
-pip install python-dotenv
-```
-
-3. **Run the chat application**:
+4. **Run the chat application**:
 
 ```bash
 python app.py
 ```
 
-4. **Start chatting** in the terminal.
+5. **Start chatting** in the terminal.
 
    * Toxic messages (score ≥ 0.8) trigger **SOS alerts** via Telegram.
    * Predefined bot replies are displayed automatically.

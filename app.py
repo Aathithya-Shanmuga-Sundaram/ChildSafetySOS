@@ -5,8 +5,8 @@ from transformers import pipeline
 classifier=pipeline("text-classification", model="unitary/toxic-bert")
 
 #Telegram Bot Setup
-Bot_token = "8413444861:AAHMqX1NTO5bGsBs0uXFzwhyLxjgYuDb0hI"
-Parent_token = "5061583546"
+Bot_token = "BOT_TOKEN"
+Parent_token = "PARENT_TOKEN"
 
 def SOS(message,label,score,sender):
     text=f"SOS ALERT \n From {sender}\n Message:{message}\nType:{label}\nRisk:{score:.2f}"
@@ -22,7 +22,9 @@ def sentimenal_analysis(message,sender):
 
     if flagged:
         print(f"{sender}: {message}")
-        print("Alert:{sender} sent/received a flagged message!")
+        # Terminal Alert for Making sure the SOS is Sent, [Can be Removed if needed]
+        print(f"Alert: {sender} sent/received a flagged message!")
+        # Sends SOS via Telegram
         SOS(message,label,score,sender)
     else:
         print(f"{sender}: {message}")
@@ -40,3 +42,4 @@ while app_run:
 
     reply=random.choice(bot_replies)
     sentimenal_analysis(reply,sender="Bot/Friend")
+
